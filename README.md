@@ -2,7 +2,17 @@ convertAppIcons
 ===============
 
 convert iOS-App Icons and Android-App Icons from 1024x1024 png.
-use ImageMagic 'convert' command.
+
+input:<br>
+　1024x1024 png file.<br>
+
+output:<br>
+　iOS-App Icons.<br>
+　Android-App Icons.<br>
+
+requirements:<br>
+　ruby.<br>
+　ImageMagic.<br>
 
 ## Usage
 
