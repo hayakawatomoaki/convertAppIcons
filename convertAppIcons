@@ -1,0 +1,58 @@
+#!/usr/bin/ruby
+
+# Include
+require 'optparse'
+require 'fileutils'
+require './config'
+
+# define function
+def makeAppIcon(in_path, out_path, size)
+  p "create: #{out_path}"
+
+  command_option = ""
+  #command_option = "-unsharp 2x1.4+0.5+0"
+
+  # mkdir
+  FileUtils.mkdir_p(File.dirname(out_path)) # mkdir
+
+  # makeIcon
+  command = "convert #{in_path} -resize #{size} #{command_option} #{out_path}"
+  system(command)
+end
+
+# variable check
+# @todo
+
+# Options
+option_hash = {}
+parser = OptionParser.new{|opt|
+  opt.on('-i input png-file. [1024x1024]') {|v| option_hash[:in] = v}    
+  opt.on('-o output directory.') {|v| option_hash[:out] = v } 
+  opt.parse!(ARGV)
+}
+in_path = option_hash[:in]
+out_dir = option_hash[:out]
+
+# argument check
+if in_path == nil || out_dir == nil then
+    print parser.help()
+    exit(1)
+end
+
+# make iOS App Icon
+$icon_ios_array.each{|value|
+  fname = value[:fname]
+  size = value[:size]
+  out_path = "#{out_dir}/ios/#{fname}"
+  makeAppIcon(in_path, out_path, size)
+}
+
+# make Android App Icon
+$icon_android_array.each{|value|
+  fname = value[:fname]
+  size = value[:size]
+  out_path = "#{out_dir}/android/#{fname}"
+  makeAppIcon(in_path, out_path, size)
+}
+
+
