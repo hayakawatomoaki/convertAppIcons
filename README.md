@@ -56,6 +56,7 @@ Icon-Small@3x.png    : 87x87
 Icon.png             : 57x57
 Icon@2x.png          : 114x114
 Icon@3x.png          : 171x171
+Icon-120.png         : 120x120
 iTunesArtwork.png    : 512x512
 iTunesArtwork@2x.png : 1024x1024
 iTunesArtwork@3x.png : 1536x1536
