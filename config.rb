@@ -30,6 +30,7 @@ $icon_ios_array = [
                { fname: "Icon.png" , size: 57},
                { fname: "Icon@2x.png" , size: 114},
                { fname: "Icon@3x.png" , size: 171},
+               { fname: "Icon-120.png" , size: 120},
                { fname: "iTunesArtwork.png" , size: 512},
                { fname: "iTunesArtwork@2x.png" , size: 1024},
                { fname: "iTunesArtwork@3x.png" , size: 1536}
