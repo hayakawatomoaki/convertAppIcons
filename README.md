@@ -26,6 +26,9 @@ $ ./convertAppIcons -i sample_icon.png -o out
 
 converted images:
 ##iOS
+Icon-20.png          : 20x20
+Icon-20@2x.png       : 40x40
+Icon-20@3x.png       : 60x60
 Icon-29.png          : 29x29
 Icon-29@2x.png       : 58x58
 Icon-29@3x.png       : 87x87
@@ -44,9 +47,11 @@ Icon-60@3x.png       : 180x180
 Icon-72.png          : 72x72
 Icon-72@2x.png       : 144x144
 Icon-72@3x.png       : 216x216
-Icon-76.png          : 76x76
-Icon-76@2x.png       : 152x152
-Icon-76@3x.png       : 228
+icon-76.png          : 76x76
+icon-76@2x.png       : 152x152
+Icon-76@3x.png       : 228x228
+icon-83.5.png        : 83.5x83.5
+icon-83.5@2x.png     : 167x167
 Icon-Small-50.png    : 50x50
 Icon-Small-50@2x.png : 100x100
 Icon-Small-50@3x.png : 150x150
