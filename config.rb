@@ -1,5 +1,8 @@
 # file name and size
 $icon_ios_array = [
+               { fname: "Icon-20.png", size: 20 },
+               { fname: "Icon-20@2x.png", size: 40 },
+               { fname: "Icon-20@3x.png", size: 60 },
                { fname: "Icon-29.png", size: 29 },
                { fname: "Icon-29@2x.png", size: 58},
                { fname: "Icon-29@3x.png", size: 87},
@@ -21,6 +24,8 @@ $icon_ios_array = [
                { fname: "Icon-76.png" , size: 76},
                { fname: "Icon-76@2x.png" , size: 152},
                { fname: "Icon-76@3x.png" , size: 228},
+               { fname: "Icon-83.5.png" , size: 83.5},
+               { fname: "Icon-83.5@2x.png" , size: 167},
                { fname: "Icon-Small-50.png" , size: 50},
                { fname: "Icon-Small-50@2x.png" , size: 100},
                { fname: "Icon-Small-50@3x.png" , size: 150},
