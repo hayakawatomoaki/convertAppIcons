@@ -3,6 +3,7 @@
 # Include
 require 'optparse'
 require 'fileutils'
+require "open3"
 require './config'
 
 # define function
@@ -17,7 +18,9 @@ def makeAppIcon(in_path, out_path, size)
 
   # makeIcon
   command = "convert #{in_path} -resize #{size} #{command_option} #{out_path}"
-  system(command)
+  stdout, stderr, status = Open3.capture3(command)
+  print(stdout)
+  print(stderr)
 end
 
 # variable check
@@ -26,8 +29,8 @@ end
 # Options
 option_hash = {}
 parser = OptionParser.new{|opt|
-  opt.on('-i input png-file. [1024x1024]') {|v| option_hash[:in] = v}    
-  opt.on('-o output directory.') {|v| option_hash[:out] = v } 
+  opt.on('-i input png-file. [1024x1024]') {|v| option_hash[:in] = v}
+  opt.on('-o output directory.') {|v| option_hash[:out] = v }
   opt.parse!(ARGV)
 }
 in_path = option_hash[:in]
